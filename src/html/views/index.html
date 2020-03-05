@@ -1,0 +1,31 @@
+<% var data = { title: "Test", author: "mal" }; %> <%=
+_.template(require('./../includes/header.html').default)(data) %>
+
+<div class="container">
+  <div class="question">
+    <div id='test' class="question-container">
+      <h1>Questions <span id='step'>1</span>/<span id='last-step'>5</span></h1>
+      <div id='question-title'>Did you sleep well today?</div>
+
+      <div class="control">
+        <div class="radio">
+            <input id="radio-1" type="radio" name="answer" value='yes' />
+            <label for="radio-1" class="radio-label">yes</label>
+        </div>
+        <div class="radio">
+            <input id="radio-2" type="radio" name="answer" value='no' />
+            <label for="radio-2" class="radio-label">no</label>
+        </div>
+        <div class="radio">
+            <input id="radio-3" type="radio" name="answer" value="can't answer" />
+            <label for="radio-3" class="radio-label">can't answer</label>
+        </div>
+      </div>
+      <div class="navigate-button">
+        <button id="next-button" class="btn">NEXT</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= _.template(require('./../includes/footer.html').default)(data) %>
